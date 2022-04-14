@@ -1,0 +1,90 @@
+@import 'null.scss';
+
+body{
+   background-color: gray;
+	padding: 30px;
+	.menu{
+		& a {
+			text-decoration: none;
+		}
+		& li {
+			position: relative;
+			list-style: none;
+		}
+	}
+	.menu__list{
+		display: flex;
+		&>li {
+			margin: 0px 20px 0px 0px;
+		}
+		&>li:first-child{
+			padding: 0px 22px 0px 0px;
+		}
+		&>li:hover .sub-menu__list{
+			display: block;
+		}
+	}
+	.menu__links{
+		color: white;
+	}
+	.sub-menu__list{
+		min-width: 300px;
+		display: none;
+		position: absolute;
+		left: 0;
+		top: 0px;
+		padding: 20px 0px 0px 0px;
+		&>li{
+			background-color: white;
+		}
+		&>li:hover .sub-sub-menu__list{
+			display: block;
+		}
+	}
+	.sub-menu__links{
+		color: black;
+		display: inline-block;
+		padding: 5px 10px;
+	}
+	.sub-sub-menu__list{
+		display: none;
+		min-width: 300px;
+		position: absolute;
+		top: 0;
+		left: 100%;
+		padding: 0px 0px 0px 5px;
+		&>li{
+			background-color: black;
+		}
+	}
+	.sub-sub-menu__links{
+		color: white;
+		display: inline-block;
+		padding: 5px 10px;
+	}
+	.menu__arrow{
+	}
+	.arrow{
+		width: 0;
+		height: 0;
+		position: absolute;
+		right: 0;
+		top: 6px;
+	}
+	.active1{
+		border-top: 8px solid white;
+		border-right: 8px solid transparent;
+		border-left: 8px solid transparent;
+	}
+	.active2{
+		transform: scale(1, -1);
+		transition: 0.5s;
+	}
+	.button{
+		margin-top: 100px;
+	}
+
+}
+
+
+
